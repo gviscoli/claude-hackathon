@@ -48,6 +48,7 @@
     <span class="badge">Coordinator + Specialists</span>
     <span class="badge">PreToolUse Hooks</span>
     <span class="badge">Adversarial Eval</span>
+    <span class="badge">AWS Bedrock</span>
   </div>
   <p style="margin-top:40px">
     200+ daily claims arriving via 4 channels, hand-triaged to 12 teams.<br>
@@ -95,7 +96,9 @@
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
     <span class="yellow">[PreToolUse Hook]</span>  ←  blocks if payout &gt; €50k or fraud ≥ 0.7<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
-    <span class="hl">[processed_claims/{claim_id}.json]</span>  +  audit.log
+    <span class="hl">[processed_claims/{claim_id}.json]</span>  +  audit.log<br>
+    <br>
+    Inference provider: &nbsp;<span class="green">Anthropic API</span> &nbsp;|&nbsp; <span class="yellow">AWS Bedrock</span> &nbsp;(selezionato via <span class="hl">CLAUDE_CODE_USE_BEDROCK</span>)
   </div>
 </section>
 
@@ -217,7 +220,7 @@
     <div class="card">
       <div class="icon">🤖</div>
       <h3>Coordinator + 3 Specialists</h3>
-      <p>AgentDefinition subagents with context isolation. Each specialist has domain-specific decision criteria.</p>
+      <p>AgentDefinition subagents with context isolation. Each specialist has domain-specific decision criteria. Inference via <strong>Anthropic API</strong> or <strong>AWS Bedrock</strong> — selezionato via env.</p>
     </div>
     <div class="card">
       <div class="icon">🔧</div>

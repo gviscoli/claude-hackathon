@@ -6,7 +6,9 @@ Decisions: fast-track / investigate / deny / escalate-human.
 
 ## Stack
 - Runtime: Python 3.12
-- AI: Claude Agent SDK (`claude-agent-sdk`) — `claude-sonnet-4-20250514`
+- AI: Claude Agent SDK (`claude-agent-sdk`)
+- Provider: Anthropic API **oppure** AWS Bedrock (selezionato via `.env`)
+- Model: `claude-sonnet-4-20250514` (API) / `BEDROCK_MODEL_ID` env var (Bedrock)
 - Tools: custom Bash scripts in `src/tools/`
 - Data: JSON files in `src/data/`
 - Tests: pytest
@@ -44,7 +46,8 @@ All tool scripts:
 
 ## Important
 - Never commit `.env`
-- Model: `claude-sonnet-4-20250514`
+- Provider: set `ANTHROPIC_API_KEY` (Anthropic) oppure `CLAUDE_CODE_USE_BEDROCK=1` + credenziali AWS (Bedrock)
+- Bedrock model ID: `anthropic.claude-sonnet-4-20250514-v1:0` — verificare nella console AWS Bedrock
 - Max iterations guard: `max_turns=20` in `ClaudeAgentOptions`
 - Subagents do NOT inherit coordinator context — pass all data in subagent prompt
 - Every decision must be written to `src/data/processed_claims/{claim_id}.json`

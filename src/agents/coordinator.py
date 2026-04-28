@@ -70,11 +70,26 @@ Decision criteria:
 """
 
 
+def _bedrock_env() -> dict[str, str]:
+    """Build env overrides for AWS Bedrock when CLAUDE_CODE_USE_BEDROCK is set."""
+    if not os.getenv("CLAUDE_CODE_USE_BEDROCK"):
+        return {}
+    env: dict[str, str] = {"CLAUDE_CODE_USE_BEDROCK": "1"}
+    for var in ("AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_REGION", "AWS_SESSION_TOKEN"):
+        val = os.getenv(var)
+        if val:
+            env[var] = val
+    return env
+
+
 def build_options() -> ClaudeAgentOptions:
+    bedrock_model = os.getenv("BEDROCK_MODEL_ID")
     return ClaudeAgentOptions(
         allowed_tools=["Bash", "Read", "Write", "Glob", "Agent"],
         max_turns=20,
         cwd=str(BASE_DIR),
+        model=bedrock_model or None,
+        env=_bedrock_env(),
         agents={
             "auto-claims-specialist": AgentDefinition(
                 description="Specialist for automobile and vehicle insurance claims. Evaluates collision, theft, fire, and liability claims.",
