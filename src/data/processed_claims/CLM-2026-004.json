@@ -1,0 +1,11 @@
+{
+  "claim_id": "CLM-2026-004",
+  "decision": "escalate-human",
+  "confidence": 0.97,
+  "specialist": "auto-claims-specialist",
+  "reasoning": "This claim presents an extreme fraud risk profile and must be escalated for human review. The fraud score is 1.0 (maximum), triggered by multiple high-risk indicators: the claim involves an alleged theft with no witnesses, no camera footage, no supporting documentation, and an explicit request for urgent cash settlement. The customer has a prior fraud flag on record (CLM-2024-089, denied for fraud). The claimed amount (29,500 EUR) is 98% of the coverage limit, a pattern consistent with fraudulent total-loss staging. Furthermore, the theft claim type is not covered under policy POL004, which only covers collision and third-party-liability. The escalation rule requiring human review for fraud_score >= 0.7 is triggered (score = 1.0).",
+  "fraud_score": 1.0,
+  "recommended_payout": null,
+  "escalation_reason": "Fraud score of 1.0 exceeds the 0.7 threshold, mandating human escalation. Theft is not a covered peril under POL004. Zero documentation provided, prior fraud flag on account, claim amount staged at 98% of coverage limit. Human investigator must verify coverage applicability and conduct full fraud investigation before any payout decision.",
+  "written_at": "2026-04-28T13:57:23.547134"
+}

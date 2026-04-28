@@ -9,6 +9,40 @@ MAX_AUTO_AMOUNT = float(os.getenv("MAX_AUTO_APPROVE_AMOUNT", "50000"))
 FRAUD_THRESHOLD = float(os.getenv("FRAUD_SCORE_THRESHOLD", "0.7"))
 
 
+def _extract_json_from_command(command: str) -> dict | None:
+    """Extract the JSON decision dict from a create_claim_record.py command.
+
+    Handles both single-quoted and double-quoted (escaped) formats that the
+    agent may produce depending on the shell context.
+    """
+    # Format A: create_claim_record.py '{"key": "value"}'
+    try:
+        start = command.index("'") + 1
+        end = command.rindex("'")
+        if start < end:
+            return json.loads(command[start:end])
+    except (ValueError, json.JSONDecodeError):
+        pass
+
+    # Format B: create_claim_record.py "{\"key\": \"value\"}"
+    # Find the outermost { ... } and unescape backslash-quoted chars
+    try:
+        brace_start = command.index("{")
+        depth = 0
+        for i, ch in enumerate(command[brace_start:], brace_start):
+            if ch == "{":
+                depth += 1
+            elif ch == "}":
+                depth -= 1
+                if depth == 0:
+                    raw = command[brace_start : i + 1].replace('\\"', '"')
+                    return json.loads(raw)
+    except (ValueError, json.JSONDecodeError):
+        pass
+
+    return None
+
+
 def _write_audit(entry: dict) -> None:
     with open(AUDIT_LOG, "a") as f:
         f.write(json.dumps({"ts": datetime.now().isoformat(), **entry}) + "\n")
@@ -26,9 +60,9 @@ async def block_high_value_auto_approve(input_data: dict, tool_use_id, context) 
         return {}
 
     try:
-        json_start = command.index("'") + 1
-        json_end = command.rindex("'")
-        decision = json.loads(command[json_start:json_end])
+        decision = _extract_json_from_command(command)
+        if decision is None:
+            return {}
         amount = decision.get("recommended_payout", 0)
         fraud_score = decision.get("fraud_score", 0.0)
 

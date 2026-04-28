@@ -1,0 +1,11 @@
+{
+  "claim_id": "CLM-2026-003",
+  "decision": "fast-track",
+  "confidence": 0.95,
+  "specialist": "Medical Claims Specialist (claude-sonnet-4-6)",
+  "reasoning": "Emergency appendectomy at Ospedale Niguarda on 2026-04-18 with 3-day hospitalization. Policy POL003 is active and covers hospitalization, surgery, and emergency care. All three required documents are attached (hospital_invoice.pdf, discharge_summary.pdf, surgical_report.pdf). Fraud score is 0.0 with no risk indicators. Estimated amount 6,200 EUR is well within the 100,000 EUR coverage limit. Recommended payout of 5,700 EUR (6,200 minus 500 EUR deductible) is below the 10,000 EUR fast-track ceiling. All escalation rule checks passed: payout < 50,000, fraud_score < 0.7, confidence >= 0.6, policy is active.",
+  "fraud_score": 0.0,
+  "recommended_payout": 5700.0,
+  "escalation_reason": null,
+  "written_at": "2026-04-28T13:51:02.061559"
+}
