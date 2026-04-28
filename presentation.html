@@ -208,27 +208,57 @@
   <h2>Demo — 4 Claims Processed</h2>
   <table class="decision-table">
     <thead>
-      <tr><th>Claim ID</th><th>Type</th><th>Amount</th><th>Decision</th><th>Fraud</th></tr>
+      <tr><th>Claim ID</th><th>Type</th><th>Importo</th><th>Decisione</th><th>Conf</th><th>Payout</th><th>Fraud</th></tr>
     </thead>
     <tbody>
       <tr>
         <td>CLM-2026-001</td><td>Auto</td><td>€3,500</td>
-        <td class="fast-track">✓ fast-track</td><td>0.00</td>
+        <td class="fast-track">✓ fast-track</td><td>0.95</td><td style="color:#4ade80">€2,500</td><td>0.00</td>
       </tr>
       <tr>
         <td>CLM-2026-002</td><td>Property</td><td>€28,000</td>
-        <td class="investigate">? investigate</td><td>0.10</td>
+        <td class="investigate">? investigate</td><td>0.88</td><td style="color:#fbbf24">€25,500</td><td>0.05</td>
       </tr>
       <tr>
         <td>CLM-2026-003</td><td>Medical</td><td>€6,200</td>
-        <td class="fast-track">✓ fast-track</td><td>0.00</td>
+        <td class="fast-track">✓ fast-track</td><td>0.95</td><td style="color:#4ade80">€5,700</td><td>0.00</td>
       </tr>
       <tr>
         <td>CLM-2026-004</td><td>Auto</td><td>€29,500</td>
-        <td class="escalate">! escalate-human</td><td>0.85</td>
+        <td class="escalate">! escalate-human</td><td>0.97</td><td style="color:#c084fc">— (bloccato)</td><td style="color:#f87171">1.00</td>
       </tr>
     </tbody>
   </table>
+  <div style="display:flex;gap:40px;margin-top:28px;flex-wrap:wrap;justify-content:center;">
+    <div style="text-align:center;">
+      <div style="font-size:0.8rem;color:#64748b;margin-bottom:8px;">Fraud Score per Claim</div>
+      <svg width="260" height="100" style="overflow:visible">
+        <rect x="10"  y="80" width="40" height="2"  fill="#4ade80" rx="2"/>
+        <rect x="70"  y="75" width="40" height="7"  fill="#fbbf24" rx="2"/>
+        <rect x="130" y="80" width="40" height="2"  fill="#4ade80" rx="2"/>
+        <rect x="190" y="0"  width="40" height="82" fill="#f87171" rx="2"/>
+        <line x1="0" y1="58" x2="260" y2="58" stroke="#ef4444" stroke-width="1" stroke-dasharray="4,3"/>
+        <text x="0" y="54" font-size="9" fill="#ef4444">threshold 0.7</text>
+        <text x="20"  y="95" font-size="9" fill="#94a3b8" text-anchor="middle">001</text>
+        <text x="90"  y="95" font-size="9" fill="#94a3b8" text-anchor="middle">002</text>
+        <text x="150" y="95" font-size="9" fill="#94a3b8" text-anchor="middle">003</text>
+        <text x="210" y="95" font-size="9" fill="#f87171" text-anchor="middle">004</text>
+      </svg>
+    </div>
+    <div style="text-align:center;">
+      <div style="font-size:0.8rem;color:#64748b;margin-bottom:8px;">Payout Autorizzato (€)</div>
+      <svg width="260" height="100" style="overflow:visible">
+        <rect x="10"  y="77" width="40" height="5"  fill="#4ade80" rx="2"/>
+        <rect x="70"  y="29" width="40" height="53" fill="#fbbf24" rx="2"/>
+        <rect x="130" y="66" width="40" height="16" fill="#4ade80" rx="2"/>
+        <rect x="190" y="40" width="40" height="42" fill="#c084fc" rx="2" opacity="0.4"/>
+        <text x="20"  y="95" font-size="9" fill="#94a3b8" text-anchor="middle">2,5k</text>
+        <text x="90"  y="95" font-size="9" fill="#94a3b8" text-anchor="middle">25,5k</text>
+        <text x="150" y="95" font-size="9" fill="#94a3b8" text-anchor="middle">5,7k</text>
+        <text x="210" y="95" font-size="9" fill="#c084fc" text-anchor="middle">bloccato</text>
+      </svg>
+    </div>
+  </div>
 </section>
 
 <!-- Slide 8: What We Built -->
