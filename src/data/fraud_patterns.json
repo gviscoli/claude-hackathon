@@ -1,0 +1,25 @@
+{
+  "high_risk_keywords": [
+    "total loss", "stolen", "fire overnight", "no witnesses",
+    "cash settlement", "urgent payment", "lost documentation"
+  ],
+  "suspicious_patterns": [
+    "multiple claims within 6 months",
+    "claim amount near coverage limit",
+    "policy taken out less than 30 days before claim",
+    "previous fraud flag on account",
+    "inconsistent incident timeline",
+    "third claim in 12 months"
+  ],
+  "auto_deny_conditions": [
+    "policy_inactive",
+    "coverage_type_not_covered",
+    "incident_predates_policy"
+  ],
+  "escalation_thresholds": {
+    "amount_usd": 50000,
+    "fraud_score": 0.7,
+    "confidence_below": 0.6,
+    "claims_in_12_months": 3
+  }
+}

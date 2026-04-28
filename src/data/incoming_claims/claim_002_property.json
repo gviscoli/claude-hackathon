@@ -1,0 +1,15 @@
+{
+  "claim_id": "CLM-2026-002",
+  "policy_id": "POL002",
+  "customer_id": "CUST002",
+  "channel": "email",
+  "claim_type": "property",
+  "description": "Severe flooding in basement due to storm on April 22. Water damage to floor, walls, and stored equipment. Plumber confirms broken external pipe exacerbated the flooding. Estimated damage: 28,000 EUR.",
+  "estimated_amount": 28000.0,
+  "incident_date": "2026-04-22",
+  "attachments": ["damage_assessment.pdf", "plumber_report.pdf", "flood_photos.jpg"],
+  "metadata": {
+    "email_from": "giulia.ferrari@email.it",
+    "submission_time": "2026-04-23T09:15:00Z"
+  }
+}

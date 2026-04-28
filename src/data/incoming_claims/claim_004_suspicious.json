@@ -1,0 +1,15 @@
+{
+  "claim_id": "CLM-2026-004",
+  "policy_id": "POL004",
+  "customer_id": "CUST004",
+  "channel": "fax",
+  "claim_type": "auto",
+  "description": "Total loss of vehicle. Car stolen overnight, no witnesses, no camera footage available. Requesting urgent cash settlement for full coverage amount. Lost all documentation in the theft. Third claim this year.",
+  "estimated_amount": 29500.0,
+  "incident_date": "2026-04-27",
+  "attachments": [],
+  "metadata": {
+    "fax_number": "+39-02-12345678",
+    "submission_time": "2026-04-28T08:45:00Z"
+  }
+}

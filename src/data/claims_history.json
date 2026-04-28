@@ -1,0 +1,67 @@
+{
+  "CUST001": [
+    {
+      "claim_id": "CLM-2023-001",
+      "date": "2023-03-15",
+      "type": "auto",
+      "amount": 4200.0,
+      "decision": "paid",
+      "fraud_flag": false
+    }
+  ],
+  "CUST002": [
+    {
+      "claim_id": "CLM-2022-044",
+      "date": "2022-11-20",
+      "type": "property",
+      "amount": 12000.0,
+      "decision": "paid",
+      "fraud_flag": false
+    },
+    {
+      "claim_id": "CLM-2023-112",
+      "date": "2023-07-08",
+      "type": "property",
+      "amount": 8500.0,
+      "decision": "investigate",
+      "fraud_flag": false
+    }
+  ],
+  "CUST003": [],
+  "CUST004": [
+    {
+      "claim_id": "CLM-2024-007",
+      "date": "2024-02-10",
+      "type": "auto",
+      "amount": 900.0,
+      "decision": "fast-track",
+      "fraud_flag": false
+    },
+    {
+      "claim_id": "CLM-2024-089",
+      "date": "2024-06-22",
+      "type": "auto",
+      "amount": 15000.0,
+      "decision": "denied",
+      "fraud_flag": true
+    },
+    {
+      "claim_id": "CLM-2025-003",
+      "date": "2025-01-15",
+      "type": "auto",
+      "amount": 22000.0,
+      "decision": "investigate",
+      "fraud_flag": false
+    }
+  ],
+  "CUST005": [
+    {
+      "claim_id": "CLM-2023-200",
+      "date": "2023-09-01",
+      "type": "property",
+      "amount": 55000.0,
+      "decision": "investigate",
+      "fraud_flag": true
+    }
+  ]
+}

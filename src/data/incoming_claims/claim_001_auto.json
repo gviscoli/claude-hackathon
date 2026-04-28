@@ -1,0 +1,15 @@
+{
+  "claim_id": "CLM-2026-001",
+  "policy_id": "POL001",
+  "customer_id": "CUST001",
+  "channel": "web_portal",
+  "claim_type": "auto",
+  "description": "Rear-end collision on the A1 highway near Milan. My car was hit by another vehicle while stopped in traffic. Damage to rear bumper and trunk. Police report filed, two witnesses present. Estimated repair: 3,500 EUR.",
+  "estimated_amount": 3500.0,
+  "incident_date": "2026-04-25",
+  "attachments": ["police_report.pdf", "photos_damage_01.jpg", "photos_damage_02.jpg"],
+  "metadata": {
+    "ip_address": "192.168.1.100",
+    "submission_time": "2026-04-25T18:32:00Z"
+  }
+}

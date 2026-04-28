@@ -1,0 +1,62 @@
+{
+  "POL001": {
+    "policy_id": "POL001",
+    "customer_id": "CUST001",
+    "customer_name": "Marco Rossi",
+    "policy_type": "auto",
+    "coverage_limit": 80000,
+    "deductible": 1000,
+    "active": true,
+    "start_date": "2024-01-01",
+    "end_date": "2026-12-31",
+    "covered_items": ["collision", "theft", "fire", "third-party-liability"]
+  },
+  "POL002": {
+    "policy_id": "POL002",
+    "customer_id": "CUST002",
+    "customer_name": "Giulia Ferrari",
+    "policy_type": "property",
+    "coverage_limit": 250000,
+    "deductible": 2500,
+    "active": true,
+    "start_date": "2023-06-01",
+    "end_date": "2026-05-31",
+    "covered_items": ["fire", "flood", "theft", "earthquake", "storm"]
+  },
+  "POL003": {
+    "policy_id": "POL003",
+    "customer_id": "CUST003",
+    "customer_name": "Luca Bianchi",
+    "policy_type": "medical",
+    "coverage_limit": 100000,
+    "deductible": 500,
+    "active": true,
+    "start_date": "2024-03-01",
+    "end_date": "2025-02-28",
+    "covered_items": ["hospitalization", "surgery", "emergency", "specialist-visits"]
+  },
+  "POL004": {
+    "policy_id": "POL004",
+    "customer_id": "CUST004",
+    "customer_name": "Sofia Conti",
+    "policy_type": "auto",
+    "coverage_limit": 30000,
+    "deductible": 1500,
+    "active": true,
+    "start_date": "2025-01-01",
+    "end_date": "2027-12-31",
+    "covered_items": ["collision", "third-party-liability"]
+  },
+  "POL005": {
+    "policy_id": "POL005",
+    "customer_id": "CUST005",
+    "customer_name": "Alessandro Marino",
+    "policy_type": "property",
+    "coverage_limit": 180000,
+    "deductible": 3000,
+    "active": false,
+    "start_date": "2022-01-01",
+    "end_date": "2024-12-31",
+    "covered_items": ["fire", "theft"]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "claim_id": "CLM-2026-003",
+  "policy_id": "POL003",
+  "customer_id": "CUST003",
+  "channel": "mobile_app",
+  "claim_type": "medical",
+  "description": "Emergency appendectomy at Ospedale Niguarda, Milan. Hospitalization from April 18-21 (3 days). Surgery performed on April 18. Total hospital bill: 6,200 EUR. All documentation available.",
+  "estimated_amount": 6200.0,
+  "incident_date": "2026-04-18",
+  "attachments": ["hospital_invoice.pdf", "discharge_summary.pdf", "surgical_report.pdf"],
+  "metadata": {
+    "device": "iPhone 15",
+    "submission_time": "2026-04-21T14:20:00Z"
+  }
+}
