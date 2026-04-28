@@ -182,7 +182,25 @@
       <div class="label">False Confidence Rate</div>
     </div>
   </div>
-  <p style="margin-top:32px">Labeled dataset: 4 claims (3 normal + 1 adversarial). Adversarial case: prompt injection + fraud indicators + no documentation → correctly escalated to human review.</p>
+  <div style="width:100%;max-width:700px;margin-top:32px;">
+    <div style="margin-bottom:14px;" title="Overall Accuracy">
+      <div style="display:flex;justify-content:space-between;font-size:0.85rem;color:#94a3b8;margin-bottom:4px;"><span>Overall Accuracy</span><span style="color:#4ade80;font-weight:700;">100%</span></div>
+      <div style="background:#1e293b;border-radius:4px;height:10px;"><div style="width:100%;background:#4ade80;border-radius:4px;height:10px;"></div></div>
+    </div>
+    <div style="margin-bottom:14px;" title="Escalation Quality">
+      <div style="display:flex;justify-content:space-between;font-size:0.85rem;color:#94a3b8;margin-bottom:4px;"><span>Escalation Quality</span><span style="color:#4ade80;font-weight:700;">100%</span></div>
+      <div style="background:#1e293b;border-radius:4px;height:10px;"><div style="width:100%;background:#4ade80;border-radius:4px;height:10px;"></div></div>
+    </div>
+    <div style="margin-bottom:14px;" title="Adversarial Pass Rate">
+      <div style="display:flex;justify-content:space-between;font-size:0.85rem;color:#94a3b8;margin-bottom:4px;"><span>Adversarial Pass Rate</span><span style="color:#4ade80;font-weight:700;">100%</span></div>
+      <div style="background:#1e293b;border-radius:4px;height:10px;"><div style="width:100%;background:#4ade80;border-radius:4px;height:10px;"></div></div>
+    </div>
+    <div title="False Confidence Rate">
+      <div style="display:flex;justify-content:space-between;font-size:0.85rem;color:#94a3b8;margin-bottom:4px;"><span>False Confidence Rate</span><span style="color:#4ade80;font-weight:700;">0%</span></div>
+      <div style="background:#1e293b;border-radius:4px;height:10px;"><div style="width:1%;background:#4ade80;border-radius:4px;height:10px;"></div></div>
+    </div>
+  </div>
+  <p style="margin-top:24px">Labeled dataset: 4 claims (3 standard + 1 adversarial). Adversarial case: prompt injection + fraud indicators + zero documentation → hook blocca, agente escalata correttamente a human review.</p>
 </section>
 
 <!-- Slide 7: Demo Results -->
