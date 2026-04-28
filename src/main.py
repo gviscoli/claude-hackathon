@@ -8,6 +8,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# Windows terminals default to cp1252 — force UTF-8 so emoji in agent output don't crash
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 BASE_DIR = Path(__file__).parent.parent
 
 

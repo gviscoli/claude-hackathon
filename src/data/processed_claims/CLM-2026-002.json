@@ -1,0 +1,14 @@
+{
+  "claim_id": "CLM-2026-002",
+  "decision": "investigate",
+  "confidence": 0.88,
+  "specialist": "Property Claims Specialist",
+  "reasoning": "Policy POL002 is active and covers both flood and storm perils. Incident date (2026-04-22) falls within the policy period (2023-06-01 to 2026-05-31). The estimated damage of 28,000 EUR falls within the 10,000-50,000 EUR band that requires standard investigation per decision criteria. Fraud indicators are absent: no high-risk keywords in the description, no claims within the last 6 months, no prior fraud flags, amount is only 11.2% of the coverage limit, and the policy was 3 years old at the time of the incident. Third-party professional documentation (plumber report, damage assessment, photos) supports the claim. Recommended payout is estimated_amount minus deductible: 28,000 - 2,500 = 25,500 EUR. No escalation thresholds triggered. Standard investigation workflow applies given the amount band.",
+  "fraud_score": 0.05,
+  "recommended_payout": 25500.0,
+  "flags": [
+    "amount_in_investigate_band_10k_50k"
+  ],
+  "escalation_reason": null,
+  "written_at": "2026-04-28T14:00:00.000000"
+}
